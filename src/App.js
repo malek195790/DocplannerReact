@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './Header';
+import Intro from './Intro-section';
+import PatientDoctor from './PatientDoctor';
+import CompanySection from './CompanySection';
+import Banner from './Banner';
 import './App.css';
+import OfficeLocation from './OfficeLocation';
+import Footer from './Footer';
+const navmenu = [
+  {name:'About us'},
+  {name:'Career'},
+  {name:'Departements', sub:['Marketing & PR','Customer Success & Sales','IT, Product, Design & UX','Finance & Administration','HR	& more']}
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header menu={navmenu} className='header'/>
+      <Intro/>
+      <PatientDoctor/>
+      <CompanySection/>
+      <Banner/>
+      <OfficeLocation/>
+      <Footer/>
     </div>
   );
 }
